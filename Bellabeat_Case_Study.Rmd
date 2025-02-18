@@ -1,0 +1,116 @@
+---
+title: "Data-Driven Insights: How Activity & Lifestyle Impact Calorie Burn"
+author: "James Vinyo"
+date: "r Sys.Date()"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: true
+    df_print: paged
+---
+
+# *1. Introduction*
+Bellabeat is a high-tech manufacturer of health-focused products for women. The company aims to use smart device data to improve marketing strategy and user engagement. This case study explores *how activity, sleep, heart rate, and weight impact calorie burn*, providing recommendations to enhance Bellabeat’s market strategy.
+
+# *2. Data Preparation*
+## *2.1 Datasets Used*
+I used *5 datasets* from Fitbit smart devices:
+
+- **Activity Data (dailyActivity_merged)** → Steps, activity intensity, and calories burned.  
+- **Sleep Data (minuteSleep_merged)** → Duration and quality of sleep.  
+- **Heart Rate Data (heartrate_seconds_merged)** → Heart rate levels over time.  
+- **Intensity Data (hourlyIntensities_merged)** → Activity intensity measurements.  
+- **Weight Data (weightLoginfo_merged)** → Weight, BMI, and fat percentage.  
+
+## *2.2 Data Cleaning & Merging*
+- Handled missing values (e.g., missing weight entries).  
+- Converted date formats for consistency.  
+- Merged datasets by **User ID (Id) and Date**.  
+
+
+
+```{r setup, message=FALSE, warning=FALSE}
+# Load required packages
+library(dplyr)
+library(ggplot2)
+library(knitr)
+
+# Read cleaned dataset
+merged_data <- read.csv("merged_data.csv")
+
+# Check structure
+str(merged_data)
+
+3. Key Insights
+
+3.1 Activity & Calories Burned
+
+🔹 Finding: Activity intensity strongly impacts calories burned.
+
+ggplot(merged_data, aes(x = DailyIntensity, y = Calories)) +
+  geom_point(color = "blue") +
+  geom_smooth(method = "lm", color = "red", se = FALSE) +
+  labs(title = "Activity Intensity vs. Calories Burned", x = "Daily Intensity", y = "Calories Burned")
+
+✅ Higher activity intensity = more calories burned.
+✅ Step count alone is a weaker predictor than intensity.
+
+3.2 Sleep & Calories Burned
+
+🔹 Finding: Sleep has no strong correlation with calorie burn.
+
+cor(merged_data$TotalSleepMinutes, merged_data$Calories, use = "complete.obs")
+
+❌ No strong impact (-0.07 correlation).
+🔹 However, good sleep improves recovery and motivation to exercise.
+
+3.3 Heart Rate & Calories Burned
+
+🔹 Finding: Moderate impact on calorie burn.
+
+cor(merged_data$AverageHeartRate, merged_data$Calories, use = "complete.obs")
+
+✅ Higher heart rate slightly increases calorie burn (0.28 correlation).
+
+3.4 Weight & Calories Burned
+
+🔹 Finding: Weak impact of weight on calories burned.
+
+ggplot(merged_data, aes(x = WeightKg, y = Calories)) +
+  geom_point(color = "blue") +
+  geom_smooth(method = "lm", color = "red", se = FALSE) +
+  labs(title = "Weight vs. Calories Burned", x = "Weight (Kg)", y = "Calories Burned")
+
+✅ Weight has a weak correlation (0.37) with calorie burn.
+✅ Activity intensity matters more than weight alone.
+
+4. Business Recommendations
+
+🔹 1. Shift Marketing to “Active Minutes” Instead of Step Goals
+	•	Market “high-intensity workouts” for weight loss and fitness tracking.
+	•	Introduce “Active Minutes Goals” instead of step count.
+
+🔹 2. Introduce a “Heart Rate Efficiency Score”
+	•	Help users understand how effectively they burn calories at different heart rates.
+
+🔹 3. Expand Sleep & Recovery Coaching
+	•	Provide personalized sleep recommendations based on daily activity levels.
+
+🔹 4. Develop Personalized Calorie Burn Predictions
+	•	Combine activity intensity + heart rate for better calorie tracking.
+
+5. Conclusion & Next Steps
+
+Bellabeat can leverage data-driven insights to enhance its product offerings and marketing strategy:
+✅ Activity intensity, not just steps, determines calorie burn.
+✅ Heart rate data can improve workout efficiency tracking.
+✅ Personalized fitness coaching will improve user engagement.
+
+Next Steps:
+🔹 Implement smart coaching features.
+🔹 Market Bellabeat as a personalized health optimization tool.
+🔹 Expand insights into other lifestyle factors (hydration, stress tracking, etc.).
+
+
+
