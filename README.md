@@ -14,13 +14,12 @@ This analysis explores *how activity, sleep, heart rate, and weight impact calor
 
 ---
 
-## 🔎 Key Insights  
-✔ *Activity Intensity vs. Calories Burned:* Higher intensity leads to more calories burned.  
-✔ *Steps vs. Calories Burned:* Steps alone are a weak predictor of calorie burn.  
-✔ *Heart Rate vs. Calories Burned:* Moderate correlation; higher heart rate slightly increases calorie burn.  
-✔ *Sleep vs. Calories Burned:* No strong relationship, but quality sleep may aid motivation.  
-✔ *Weight vs. Calories Burned:* Weak correlation; activity matters more than weight alone.  
-
+## 🔎 Key Findings
+	•	Higher activity levels lead to more calories burned.
+	•	Steps and calories burned have a moderate correlation.
+	•	Weight alone does not strongly impact calorie burn.
+	•	Most users engage in light/moderate activity rather than high-intensity workouts.
+	•	Calorie burn distribution is right-skewed, with some users burning significantly more.
 ---
 
 ## 📊 Visualizations  
@@ -45,7 +44,7 @@ This bar chart categorizes users’ activity levels into different intensities, 
 
 📌 Chart Title: Relationship Between Activity Intensity and Calories Burned
 📊 Description:
-This scatter plot visualizes the relationship between activity intensity and the number of calories burned. It helps assess whether higher activity levels result in increased calorie expenditure.
+Activity vs. Calories → “This scatter plot shows the relationship between activity intensity and calories burned. I observe that as activity levels increase, calorie expenditure also rises, indicating a direct correlation.
 
 🔹 Key Insights:
 	•	A positive correlation is observed—higher activity intensity generally leads to more calories burned.
