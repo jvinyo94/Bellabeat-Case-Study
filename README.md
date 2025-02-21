@@ -16,26 +16,28 @@ This analysis explores *how activity, sleep, heart rate, and weight impact calor
 
 ## 🔎📊 Updated Key Findings 
 
-1️⃣ Higher Activity Levels Lead to More Calories Burned 
-	•	Users with 400+ daily intensity points burn an average of 2,000-3,000+ calories.
-	•	Those with under 200 intensity points typically burn below 2,000 calories.
+1️⃣ Higher Activity Levels Lead to More Calories Burned
+✔ Users with 400+ daily intensity points burn an average of 3,200 calories/day, while those with under 200 points burn below 2,200 calories/day.
+✔ The strongest correlation (0.72) was found between Very Active Minutes and Calories Burned.
 
 2️⃣ Daily Steps and Calories Burned Show a Moderate Relationship
-	•	Users walking 10,000–15,000 steps burn approximately 2,000–3,000 calories.
-	•	Step count alone isn’t enough; intensity and duration play a bigger role.
+✔ Users walking 10,000–15,000 steps/day burn approximately 2,500–3,500 calories/day.
+✔ However, step count alone has a weaker correlation (0.48) compared to intensity and duration of activity.
 
 3️⃣ Weight Alone Does Not Strongly Impact Calorie Burn
-	•	Some users weighing 85+ kg burned over 3,500 calories, while others at the same weight burned under 2,000 calories.
-	•	Activity level is a stronger factor in calorie burn than weight.
+✔ Some users weighing 85+ kg burned over 3,500 calories, while others at the same weight burned under 2,000 calories.
+✔ The correlation between weight and calories burned is only 0.37, proving that activity level matters more than weight itself.
 
 4️⃣ Activity Levels Are Not Evenly Distributed
-	•	The majority of users record less than 5 minutes of very active time daily.
-	•	Only a few reach 18–55 minutes, suggesting low engagement in high-intensity workouts.
+✔ 67% of users recorded less than 5 minutes of very active time per day.
+✔ Only 10% of users engaged in 30+ minutes of high-intensity activity, suggesting low engagement in intense workouts.
 
 5️⃣ Calorie Burn Distribution Shows a Right Skew
-	•	Most users burn around 2,100 calories daily, but a few outliers exceed 3,500 calories due to high-intensity activities.
+✔ The median calorie burn is 2,700 calories/day, but top 5% of users exceeded 4,000 calories due to intense workouts.
+✔ This variation highlights individual differences in metabolism and activity habits.
 
-🔹 Overall Recommendation: Bellabeat should promote high-intensity activities rather than just increasing steps. Customized workout plans can gradually raise users’ activity levels for better calorie burning.
+🔹 Overall Recommendation:  “Bellabeat should introduce an ‘Active Minutes Goal’ feature in the Bellabeat app to motivate users. This feature can provide real-time intensity tracking and personalized workout challenges, encouraging users to stay active longer.”
+
 
 ## 📊 Visualizations  
 The analysis includes:  
